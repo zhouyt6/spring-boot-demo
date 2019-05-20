@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class HelloController {
 
-    @RequestMapping(value = "/helloWord",method = RequestMethod.POST)
+    @RequestMapping(value = "/test",method = RequestMethod.POST)
     public String hello(@RequestBody CommonSearchDTO commonSearchDTO) {
         System.out.println(commonSearchDTO);
         return "测试无参"+commonSearchDTO;
