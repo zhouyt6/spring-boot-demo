@@ -1,4 +1,9 @@
 package com.example.springbootdemo;
+
+import com.qf58.crm.utils.ParamLess;
+import com.qf58.crm.utils.ParamOptional;
+import lombok.Data;
+
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
@@ -7,7 +12,7 @@ import java.io.Serializable;
  * @Date: 2019/4/9
  * @Description: 公共组件查询共有字段
  */
-
+@Data
 public class CommonSearchDTO implements Serializable{
 
     private static final long serialVersionUID = -3784104666908739872L;
@@ -15,12 +20,13 @@ public class CommonSearchDTO implements Serializable{
     /**
      * 1不分页，2分页
      */
-    @NotNull
+    @NotNull(message = "地址id不能为空", groups = {ParamOptional.class, ParamLess.class})
     private Integer searchType;
 
     /**
      * 搜索关键字
      */
+    @NotNull
     private String searchKey;
 
     private Integer pageNo = 1;
