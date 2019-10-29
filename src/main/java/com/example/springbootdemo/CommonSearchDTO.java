@@ -27,42 +27,12 @@ public class CommonSearchDTO implements Serializable{
      * 搜索关键字
      */
     @NotNull
-    private String searchKey;
+    private Byte searchKey;
 
     private Integer pageNo = 1;
     private Integer pageSize = 10;
 
-    public Integer getSearchType() {
-        return searchType;
-    }
 
-    public void setSearchType(Integer searchType) {
-        this.searchType = searchType;
-    }
-
-    public String getSearchKey() {
-        return searchKey;
-    }
-
-    public void setSearchKey(String searchKey) {
-        this.searchKey = searchKey;
-    }
-
-    public Integer getPageNo() {
-        return pageNo;
-    }
-
-    public void setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-    }
-
-    public Integer getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-    }
 
     @Override
     public String toString() {
@@ -73,4 +43,11 @@ public class CommonSearchDTO implements Serializable{
                 ", pageSize=" + pageSize +
                 '}';
     }
+
+    public static void main(String[] args) {
+
+    }
+
+
+
 }
