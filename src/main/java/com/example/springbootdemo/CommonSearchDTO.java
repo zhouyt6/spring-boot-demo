@@ -1,5 +1,8 @@
 package com.example.springbootdemo;
 
+import cn.hutool.core.io.FileUtil;
+import cn.hutool.extra.qrcode.QrCodeUtil;
+import cn.hutool.extra.qrcode.QrConfig;
 import com.qf58.crm.utils.ParamLess;
 import com.qf58.crm.utils.ParamOptional;
 import lombok.Data;
@@ -45,7 +48,7 @@ public class CommonSearchDTO implements Serializable{
     }
 
     public static void main(String[] args) {
-
+        QrCodeUtil.generate("http://www.58qf.com", QrConfig.create().setWidth(300).setHeight(300).setImg("e:/文字.png"), FileUtil.file("e:/qrcode.jpg"));
     }
 
 
