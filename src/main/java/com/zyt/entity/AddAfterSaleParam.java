@@ -1,4 +1,4 @@
-package com.example.springbootdemo;
+package com.zyt.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

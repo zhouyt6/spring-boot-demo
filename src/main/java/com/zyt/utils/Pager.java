@@ -1,4 +1,4 @@
-package com.qf58.crm.utils;
+package com.zyt.utils;
 
 import java.io.Serializable;
 

@@ -1,10 +1,10 @@
-package com.example.springbootdemo;
+package com.zyt.entity;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.extra.qrcode.QrCodeUtil;
 import cn.hutool.extra.qrcode.QrConfig;
-import com.qf58.crm.utils.ParamLess;
-import com.qf58.crm.utils.ParamOptional;
+import com.zyt.utils.ParamLess;
+import com.zyt.utils.ParamOptional;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
