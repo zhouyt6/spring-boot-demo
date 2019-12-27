@@ -14,7 +14,7 @@ dubbo:
     protocol: zookeeper
     group: beta-bb
     # 不注册
-#    register: false
+    register: false
   protocol:
     name: dubbo
     port: 30823

@@ -54,11 +54,14 @@ public class CollectionTest {
          * 并行数组算法
          * Arrays.parallelSort()：可以对一个基本类型值或对象的数组排序
          */
-        String[] words = {"a","bbb","addd"};
+        String[] words = {"a","addd","bbb"};
         Arrays.parallelSort(words, Comparator.comparing(String::length));
+        for (String word : words) {
+            System.out.println("parallelSort ="+word);
+        }
         Arrays.parallelPrefix(words,(x,y) -> x+y);
         for (String word : words) {
-            System.out.println("wo = "+ word);
+            System.out.println("parallelPrefix = "+ word);
         }
 
 
