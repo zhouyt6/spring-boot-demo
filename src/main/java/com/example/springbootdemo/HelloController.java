@@ -18,7 +18,6 @@ public class HelloController {
 
     @RequestMapping(value = {"/one","/two"},method = RequestMethod.GET)
     public String hello2(@RequestParam(required = false, value = "id", defaultValue = "34343434343343433") Long id) {
-        System.out.println(id);
         return "测试Get无参"+id;
     }
 }
