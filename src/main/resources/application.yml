@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: spring_boot_demo
+
+dubbo:
+  application:
+    id: spring_boot_demo
+    name: spring_boot_demo
+  registry:
+    address: 172.16.11.118:2181
+    protocol: zookeeper
+    group: beta-bb
+    # 不注册
+    register: false
+  protocol:
+    name: dubbo
+    port: 30823
+  scan:
+    base-packages: com.example.springbootdemo
+

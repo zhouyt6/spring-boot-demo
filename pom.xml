@@ -16,7 +16,31 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-boot.version>2.1.1.RELEASE</spring-boot.version>
+		<dubbo.version>2.6.2</dubbo.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Spring Boot -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- Dubbo dependencies -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo-dependencies-bom</artifactId>
+				<version>${dubbo.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -28,6 +52,96 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<version>0.2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>${dubbo.version}</version>
+		</dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
+        </dependency>
+
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.qf58.crm</groupId>
+			<artifactId>crm-dubbo-api</artifactId>
+			<version>2.1.5-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>hutool-all</artifactId>
+					<groupId>cn.hutool</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>order-client</artifactId>
+					<groupId>com.bj58.qf</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>json-lib</artifactId>
+					<groupId>net.sf.json-lib</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>4.5.15</version>
+		</dependency>
+		<!--<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>-->
+		<!--hutool 依赖三方包,生层二维码-->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.otter</groupId>
+			<artifactId>canal.client</artifactId>
+			<version>1.1.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-io</artifactId>
+					<groupId>commons-io</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 
